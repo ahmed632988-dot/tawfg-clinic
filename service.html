@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>خدماتنا</title>
+<title>خدمات عيادة الاسنان</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Tajawal',Arial,sans-serif;background:#f8f9fa}
@@ -23,13 +23,13 @@ footer{background:#1a1a1a;color:#fff;text-align:center;padding:20px;margin-top:5
 <body>
 
 <div class="page-header">
-  <h1 id="page-title">خدماتنا</h1>
-  <p id="page-subtitle">نقدم لك أفضل الخدمات الطبية</p>
+  <h1 id="page-title">خدمات عيادة الاسنان</h1>
+  <p id="page-subtitle">نعتني بابتسامتك بأحدث التقنيات</p>
 </div>
 
 <div class="container">
   <div class="services" id="services-list">
-    <!-- الخدمات بتظهر هنا تلقائياً من لوحة التحكم -->
+    <!-- الخدمات بتظهر هنا تلقائياً -->
   </div>
 </div>
 
@@ -57,7 +57,8 @@ fetch('/content/services.json')
     `;
   });
   document.getElementById('services-list').innerHTML = html;
-});
+})
+.catch(err => console.log('خطأ في تحميل البيانات:', err));
 </script>
 
 </body>
